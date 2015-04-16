@@ -3,20 +3,20 @@ package net.azurewebsites.transam3y.handwriting;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.LinearLayout;
+import android.view.View;
+import android.widget.ImageButton;
 
 public class MainActivity extends ActionBarActivity {
+    private DrawView drawView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        /*
-        addContentView(findViewById(R.id.dsview), new LinearLayout.LayoutParams(findViewById(R.id.dsview).getWidth(),
-                                                                                findViewById(R.id.dsview).getHeight()));
-        */
+        drawView = (DrawView) findViewById(R.id.dview);
     }
 
     @Override
@@ -37,7 +37,26 @@ public class MainActivity extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onButtonCllicked(View view) {
+        switch (view.getId()) {
+            case R.id.recognitionbutton:
+                recognize();
+                break;
+            case R.id.trushbutton:
+                trush();
+                break;
+            default:
+        }
+    }
+
+    public void recognize() {
+
+    }
+
+    public void trush() {
+        drawView.clearCanvas();
     }
 }

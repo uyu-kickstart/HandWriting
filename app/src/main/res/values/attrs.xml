@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="DrawView"></declare-styleable>
+    <declare-styleable name="DrawView">
+        <attr name="drawView" format="reference" />
+    </declare-styleable>
 </resources>
