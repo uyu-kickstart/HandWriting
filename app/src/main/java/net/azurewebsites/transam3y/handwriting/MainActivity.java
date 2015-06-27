@@ -1,6 +1,7 @@
 package net.azurewebsites.transam3y.handwriting;
 
 
+import android.app.ProgressDialog;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -53,7 +54,13 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void recognize() {
-
+        ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.setMessage("認識中");
+        progressDialog.setCancelable(true);
+        progressDialog.show();
+        drawView.recognize_1();
+        progressDialog.dismiss();
     }
 
     public void trush() {

@@ -10,16 +10,6 @@
     android:background="#FFFFFF">
 
 
-    <net.azurewebsites.transam3y.handwriting.DrawView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        class="net.azurewebsites.transam3y.handwriting.DrawView"
-        android:id="@+id/dview"
-        android:background="@drawable/border"
-        android:layout_marginTop="30dp"
-        android:clickable="false"
-        android:layout_gravity="center_horizontal|top" />
-
     <ImageButton
         android:layout_width="88dp"
         android:layout_height="88dp"
@@ -37,6 +27,24 @@
         android:background="@drawable/nin"
         android:onClick="onButtonCllicked"
         android:layout_gravity="left|bottom" />
+
+    <ImageView
+        android:layout_width="304dp"
+        android:layout_height="304dp"
+        android:id="@+id/imageView"
+        android:layout_marginTop="30dp"
+        android:background="#000000"
+        android:layout_gravity="center_horizontal|top" />
+
+    <net.azurewebsites.transam3y.handwriting.DrawView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        class="net.azurewebsites.transam3y.handwriting.DrawView"
+        android:id="@+id/dview"
+        android:layout_marginTop="32dp"
+        android:clickable="false"
+        android:background="#ffffff"
+        android:layout_gravity="center_horizontal|top" />
 
 
 </FrameLayout>
